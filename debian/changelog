@@ -1,3 +1,9 @@
+python3.8 (3.8.5-1~20.04.2bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 27 Feb 2021 16:21:54 +0100
+
 python3.8 (3.8.5-1~20.04.2) focal-security; urgency=medium
 
   * SECURITY UPDATE: Code execution from content received via HTTP
