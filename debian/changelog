@@ -1,3 +1,20 @@
+python3.8 (3.8.5-1~20.04.2) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Code execution from content received via HTTP
+    - debian/patches/CVE-2020-27619-3.8.patch: no longer call eval() on
+      content received via HTTP in Lib/test/multibytecodec_support.py.
+    - CVE-2020-27619
+  * SECURITY UPDATE: Buffer overflow
+    - debian/patches/CVE-2021-3177-3.8.patch: replace snprintf with Python unicode
+      formatting in ctypes param reprs in Lib/ctypes/test/test_parameters.py,
+      Modules/_ctypes/callproc.c.
+    - CVE-2021-3177
+  * Skipping test_idle in riscv64 arch
+    - debian/rules: adding test_idle to TEST_EXCLUDES in riscv64 arch due it
+      hangs in build time.
+
+ -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Wed, 27 Jan 2021 12:41:15 -0300
+
 python3.8 (3.8.5-1~20.04bb1) focal; urgency=medium
 
   * Balabit patched version
