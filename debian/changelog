@@ -1,3 +1,12 @@
+python3.8 (3.8.5-1~20.04.3) focal-security; urgency=medium
+
+  * SECURITY UPDATE: improper handling of octal strings in ipaddress
+    - debian/patches/CVE-2021-29921.patch: no longer tolerate leading zeros
+      in IPv4 addresses in Lib/ipaddress.py, Lib/test/test_ipaddress.py.
+    - CVE-2021-29921
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 27 May 2021 09:30:53 -0400
+
 python3.8 (3.8.5-1~20.04.2) focal-security; urgency=medium
 
   * SECURITY UPDATE: Code execution from content received via HTTP
