@@ -31,6 +31,7 @@ Depends: build-essential,
   python3.8-dev,
   libpython3.8-testsuite:native,
   python3-gdbm,
+  python3-tk,
   python3-distutils,
 # need to turn off apport
 Restrictions: needs-root allow-stderr
@@ -42,6 +43,7 @@ Depends: build-essential,
   python3.8-dbg,
   libpython3.8-testsuite:native,
   python3-gdbm-dbg,
+  python3-tk-dbg,
   gdb,
   python3-distutils,
 # need to turn off apport

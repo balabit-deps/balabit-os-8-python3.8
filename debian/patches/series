@@ -37,6 +37,3 @@ argparse-no-shutil.diff
 arm-alignment.diff
 sysconfigdata-name.diff
 hurd_kfreebsd_thread_native_id.diff
-CVE-2020-27619-3.8.patch
-CVE-2021-3177-3.8.patch
-CVE-2021-29921.patch
