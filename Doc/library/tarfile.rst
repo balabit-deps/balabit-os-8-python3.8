@@ -37,7 +37,7 @@ Some facts and figures:
    Added support for :mod:`lzma` compression.
 
 
-.. function:: open(name=None, mode='r', fileobj=None, bufsize=10240, \*\*kwargs)
+.. function:: open(name=None, mode='r', fileobj=None, bufsize=10240, **kwargs)
 
    Return a :class:`TarFile` object for the pathname *name*. For detailed
    information on :class:`TarFile` objects and the keyword arguments that are
@@ -151,6 +151,7 @@ Some facts and figures:
 
 
 .. class:: TarFile
+   :noindex:
 
    Class for reading and writing tar archives. Do not use this class directly:
    use :func:`tarfile.open` instead. See :ref:`tarfile-objects`.
