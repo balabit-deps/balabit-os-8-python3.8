@@ -346,7 +346,7 @@ The Python compiler currently generates the following bytecode instructions.
 
 .. opcode:: ROT_FOUR
 
-   Lifts second, third and forth stack items one position up, moves top down
+   Lifts second, third and fourth stack items one position up, moves top down
    to position four.
 
    .. versionadded:: 3.8
@@ -640,7 +640,7 @@ the original TOS1.
 
 .. opcode:: LIST_APPEND (i)
 
-   Calls ``list.append(TOS[-i], TOS)``.  Used to implement list comprehensions.
+   Calls ``list.append(TOS1[-i], TOS)``.  Used to implement list comprehensions.
 
 
 .. opcode:: MAP_ADD (i)

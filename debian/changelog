@@ -1,52 +1,61 @@
-python3.8 (3.8.5-1~20.04.3bb1) focal; urgency=medium
+python3.8 (3.8.10-0ubuntu1~20.04bb1) focal-proposed; urgency=medium
 
   * Balabit patched version
 
- -- Balabit Platform Team <devnull@dev.null>  Sat, 05 Jun 2021 16:26:19 +0200
+ -- Balabit Platform Team <devnull@dev.null>  Wed, 07 Jul 2021 17:13:19 +0200
 
-python3.8 (3.8.5-1~20.04.3) focal-security; urgency=medium
+python3.8 (3.8.10-0ubuntu1~20.04) focal-proposed; urgency=medium
 
-  * SECURITY UPDATE: improper handling of octal strings in ipaddress
-    - debian/patches/CVE-2021-29921.patch: no longer tolerate leading zeros
-      in IPv4 addresses in Lib/ipaddress.py, Lib/test/test_ipaddress.py.
-    - CVE-2021-29921
+  * SRU: LP: #1928057. Backport Python 3.8.10 to 20.04 LTS.
+  * Python 3.8.10 release.
+  * Refresh patches.
+  * Call python with -S when checking the minimal set of modules.
+  * Try to detect whether python3-venv is missing (Stefano Rivera).
+    Addresses: #977887.
+  * Build a python3.8-full package.
 
- -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 27 May 2021 09:30:53 -0400
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 02 Jun 2021 12:49:15 +0200
 
-python3.8 (3.8.5-1~20.04.2bb1) focal; urgency=medium
+python3.8 (3.8.9-1) UNRELEASED; urgency=medium
 
-  * Balabit patched version
+  * Python 3.8.9 release.
 
- -- Balabit Platform Team <devnull@dev.null>  Sat, 27 Feb 2021 16:21:54 +0100
+ -- Matthias Klose <doko@debian.org>  Sat, 03 Apr 2021 11:52:27 +0200
 
-python3.8 (3.8.5-1~20.04.2) focal-security; urgency=medium
+python3.8 (3.8.7-1) unstable; urgency=medium
 
-  * SECURITY UPDATE: Code execution from content received via HTTP
-    - debian/patches/CVE-2020-27619-3.8.patch: no longer call eval() on
-      content received via HTTP in Lib/test/multibytecodec_support.py.
-    - CVE-2020-27619
-  * SECURITY UPDATE: Buffer overflow
-    - debian/patches/CVE-2021-3177-3.8.patch: replace snprintf with Python unicode
-      formatting in ctypes param reprs in Lib/ctypes/test/test_parameters.py,
-      Modules/_ctypes/callproc.c.
-    - CVE-2021-3177
-  * Skipping test_idle in riscv64 arch
-    - debian/rules: adding test_idle to TEST_EXCLUDES in riscv64 arch due it
-      hangs in build time.
+  * Python 3.8.7 release.
 
- -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Wed, 27 Jan 2021 12:41:15 -0300
+ -- Matthias Klose <doko@debian.org>  Tue, 22 Dec 2020 11:37:26 +0100
 
-python3.8 (3.8.5-1~20.04bb1) focal; urgency=medium
+python3.8 (3.8.7~rc1-1) unstable; urgency=medium
 
-  * Balabit patched version
+  * Python 3.8.7 release candidate 1.
+  * Bump standards and debhelper versions.
+  * Don't expect the test_ttk_textonly test to pass.
+  * Add python3-tk test dependency for the failing-tests* autopkg tests.
+  * Update symbols files.
 
- -- Balabit Platform Team <devnull@dev.null>  Sat, 19 Dec 2020 12:36:11 +0100
+ -- Matthias Klose <doko@debian.org>  Tue, 08 Dec 2020 13:38:52 +0100
 
-python3.8 (3.8.5-1~20.04) focal-proposed; urgency=medium
+python3.8 (3.8.6-1) unstable; urgency=medium
 
-  * SRU: LP: #1889218. Backport Python 3.8.5 to 20.04 LTS.
+  * Python 3.8.6 release.
 
- -- Matthias Klose <doko@ubuntu.com>  Tue, 28 Jul 2020 14:59:40 +0200
+ -- Matthias Klose <doko@debian.org>  Fri, 25 Sep 2020 11:36:53 +0200
+
+python3.8 (3.8.6~rc1-1) unstable; urgency=medium
+
+  * Python 3.8.6 release candidate 1.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 10 Sep 2020 11:37:32 +0200
+
+python3.8 (3.8.5-2) unstable; urgency=medium
+
+  * Don't build with system mpdecimal, which will be updated to 2.5,
+    not compatible with Python 3.8.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 02 Aug 2020 17:09:07 +0200
 
 python3.8 (3.8.5-1) unstable; urgency=medium
 
@@ -2703,7 +2712,7 @@ python2.5 (2.5.2-3) unstable; urgency=medium
     - Fix CVE-2008-1721, integer signedness error in the zlib extension module.
     - Fix urllib2 file descriptor happens byte-at-a-time, reverting
       a fix for excessively large memory allocations when calling .read()
-      on a socket object wrapped with makefile(). 
+      on a socket object wrapped with makefile().
   * Disable some regression tests on some architectures:
     - arm: test_compiler, test_ctypes.
     - armel: test_compiler.
@@ -3077,7 +3086,7 @@ python2.4 (2.4.3-4) unstable; urgency=low
   * Fix typo in pdb(1). Closes: #365772.
   * New autoconf likes the mandir in /usr/share instead of /usr; work
     with both locations. Closes: #367618.
-	
+
  -- Matthias Klose <doko@debian.org>  Wed,  7 Jun 2006 21:37:20 +0200
 
 python2.4 (2.4.3-3) unstable; urgency=low
@@ -3247,7 +3256,7 @@ python2.4 (2.4.1-2) unstable; urgency=low
 python2.4 (2.4.1-1ubuntu2) breezy; urgency=low
 
   * Add the debug symbols for the python2.4, python2.4-minimal, python2.4-gdbm
-    and python2.4-tk packages to the python2.4-dbg package. Ubuntu 10261, 
+    and python2.4-tk packages to the python2.4-dbg package. Ubuntu 10261,
   * Add gdbinit example to doc directory.
   * For os.utime, use utimes(2), correctly working with glibc-2.3.5.
     Ubuntu 10294.
@@ -3320,7 +3329,7 @@ python2.4 (2.4dfsg-1ubuntu4) hoary; urgency=medium
     - Don't map 'utf8', 'utf-8' to 'utf', which is not a known encoding
       for glibc.
   * os.py: Avoid using items() in environ.update(). Fixes #1124513.
-  * Python/pythonrun.c: 
+  * Python/pythonrun.c:
   * Build depend on locales, generate the locales needed for the
     testsuite.
   * Add build dependency on libbluetooth1-dev, adding some bluetooth
@@ -3403,8 +3412,8 @@ python2.4 (2.4-6) unstable; urgency=low
 
 python2.4 (2.4-5) unstable; urgency=high
 
-  * Fix a flaw in SimpleXMLRPCServerthat can affect any XML-RPC servers.  
-    This affects any programs have been written that allow remote 
+  * Fix a flaw in SimpleXMLRPCServerthat can affect any XML-RPC servers.
+    This affects any programs have been written that allow remote
     untrusted users to do unrestricted traversal and can allow them to
     access or change function internals using the im_* and func_* attributes.
     References: CAN-2005-0089.
@@ -3654,7 +3663,7 @@ python2.3 (2.3.3-6) unstable; urgency=low
   * Don't build python-elisp from the python2.3 source anymore,
     get it from python-mode.sf.net as a separate source package.
   * python2.3-dev suggests libc-dev (closes: #231091).
-  * get LDSHARED and CCSHARED (like, CC, CXX, CPP, CFLAGS) from 
+  * get LDSHARED and CCSHARED (like, CC, CXX, CPP, CFLAGS) from
     the environment
   * Set CXX in installed config/Makefile (closes: #230273).
 

@@ -205,7 +205,7 @@
              sitepackages.append(os.path.join(prefix, "lib", "site-packages"))
 --- a/Lib/test/test_site.py
 +++ b/Lib/test/test_site.py
-@@ -267,10 +267,10 @@ class HelperFunctionsTests(unittest.Test
+@@ -268,10 +268,10 @@ class HelperFunctionsTests(unittest.Test
          dirs = site.getsitepackages()
          if os.sep == '/':
              # OS X, Linux, FreeBSD, etc

@@ -1,7 +1,5 @@
 # DP: Don't run the test suite in random order.
 
-Index: b/Tools/scripts/run_tests.py
-===================================================================
 --- a/Tools/scripts/run_tests.py
 +++ b/Tools/scripts/run_tests.py
 @@ -31,7 +31,6 @@ def main(regrtest_args):

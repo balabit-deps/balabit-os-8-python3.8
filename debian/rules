@@ -257,6 +257,7 @@ p_doc	:= $(PVER)-doc
 p_dbg	:= $(PVER)-dbg
 p_udeb	:= $(PVER)-udeb
 p_venv	:= $(PVER)-venv
+p_full	:= $(PVER)-full
 
 p_lbase	:= lib$(PVER)-stdlib
 p_lmin	:= lib$(PVER)-minimal
@@ -275,6 +276,7 @@ d_doc	:= debian/$(p_doc)
 d_dbg	:= debian/$(p_dbg)
 d_udeb	:= debian/$(p_udeb)
 d_venv	:= debian/$(p_venv)
+d_full	:= debian/$(p_full)
 
 d_lbase	:= debian/$(p_lbase)
 d_lmin	:= debian/$(p_lmin)
@@ -373,8 +375,8 @@ common_configure_args = \
 		--with-computed-gotos \
 		--without-ensurepip \
 		--with-system-expat \
-		--with-system-libmpdec \
 		--with-dtrace \
+		--with-system-libmpdec \
 
 ifneq (,$(filter $(DEB_HOST_ARCH), avr32 or1k))
   common_configure_args += --without-ffi
@@ -481,14 +483,14 @@ ifeq ($(DEB_HOST_GNU_TYPE),$(DEB_BUILD_GNU_TYPE))
 	for m in $(MIN_MODS) $(MIN_PACKAGES) $(MIN_EXTS) $(MIN_BUILTINS); do \
 	  echo "import $$m"; \
 	done > $(buildd_static)/minmods.py
-	cd $(buildd_static) && ./python ../debian/pymindeps.py minmods.py \
+	cd $(buildd_static) && ./python -S ../debian/pymindeps.py minmods.py \
 	  > mindeps.txt
 	-if [ -x /usr/bin/dot ]; then \
-	  cd $(buildd_static) && ./python ../debian/depgraph.py \
+	  cd $(buildd_static) && ./python -S ../debian/depgraph.py \
 	    < mindeps.txt > mindeps.dot; \
 	  dot -Tpng -o mindeps.png mindeps.dot; \
 	else true; fi
-	cd $(buildd_static) && ./python ../debian/mincheck.py \
+	cd $(buildd_static) && ./python -S ../debian/mincheck.py \
 		minmods.py mindeps.txt
 endif
 	touch stamps/stamp-mincheck
@@ -532,9 +534,6 @@ ifneq (,$(filter $(DEB_HOST_ARCH), alpha))
 endif
 ifneq (,$(filter $(DEB_HOST_ARCH), sparc sparc64))
   TEST_EXCLUDES += test_gdb
-endif
-ifneq (,$(filter $(DEB_HOST_ARCH), riscv64))
-  TEST_EXCLUDES += test_idle
 endif
 
 # fail/hang with new OpenSSL
@@ -1399,7 +1398,7 @@ binary-arch: build-arch install
 	-dh_icons -a || dh_iconcache -a
 #	dh_installmime -a
 	dh_installchangelogs -a
-	for i in $(p_dev) $(p_dbg) $(p_venv); do \
+	for i in $(p_dev) $(p_dbg) $(p_venv) $(p_full); do \
 	  rm -rf debian/$$i/usr/share/doc/$$i; \
 	  ln -s $(p_base) debian/$$i/usr/share/doc/$$i; \
 	done
@@ -1511,9 +1510,7 @@ unpatch:
 
 update-patches: $(patchdir)/series
 	export QUILT_PATCHES=$(patchdir); \
-	export QUILT_REFRESH_ARGS="--no-timestamps --no-index -pab"; \
-	export QUILT_DIFF_ARGS="--no-timestamps --no-index -pab"; \
-	while quilt push; do quilt refresh; done
+	while quilt push; do quilt refresh -pab --no-timestamps --no-index; done
 
 binary: binary-indep binary-arch
 
