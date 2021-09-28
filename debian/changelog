@@ -1,3 +1,13 @@
+python3.8 (3.8.10-0ubuntu1~20.04.1) focal-security; urgency=medium
+
+  [ Marc Deslauriers ]
+  * SECURITY UPDATE: improper handling of octal strings in ipaddress
+    - debian/patches/CVE-2021-29921.patch: no longer tolerate leading zeros
+      in IPv4 addresses in Lib/ipaddress.py, Lib/test/test_ipaddress.py.
+    - CVE-2021-29921
+
+ -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Tue, 28 Sep 2021 13:10:42 -0300
+
 python3.8 (3.8.10-0ubuntu1~20.04) focal-proposed; urgency=medium
 
   * SRU: LP: #1928057. Backport Python 3.8.10 to 20.04 LTS.
