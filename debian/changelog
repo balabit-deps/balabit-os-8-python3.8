@@ -1,3 +1,15 @@
+python3.8 (3.8.10-0ubuntu1~20.04.2) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Denial of Service
+     - debian/patches/CVE-2021-3737.patch: addresses the potential for the
+       urllib http client to enter into an infinite loop and hang on a 100
+       Continue response from a malicious server.
+     - debian/patches/CVE-2021-3737_test-fix.patch: improves the regression
+       test in Lib/test/test_httplib.py
+     - CVE-2021-3737_test-fix.patch 
+
+ -- Ian Constantin <ian.constantin@canonical.com>  Fri, 26 Nov 2021 15:14:08 -0500
+
 python3.8 (3.8.10-0ubuntu1~20.04.1) focal-security; urgency=medium
 
   [ Marc Deslauriers ]
