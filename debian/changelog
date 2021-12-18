@@ -1,3 +1,9 @@
+python3.8 (3.8.10-0ubuntu1~20.04.2bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 18 Dec 2021 16:32:04 +0100
+
 python3.8 (3.8.10-0ubuntu1~20.04.2) focal-security; urgency=medium
 
   * SECURITY UPDATE: Denial of Service
