@@ -38,3 +38,5 @@ arm-alignment.diff
 sysconfigdata-name.diff
 hurd_kfreebsd_thread_native_id.diff
 CVE-2021-29921.patch
+CVE-2021-3737.patch
+CVE-2021-3737_test-fix.patch
