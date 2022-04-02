@@ -1,3 +1,9 @@
+python3.8 (3.8.10-0ubuntu1~20.04.4bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 02 Apr 2022 16:33:27 +0200
+
 python3.8 (3.8.10-0ubuntu1~20.04.4) focal-security; urgency=medium
 
   * SECURITY UPDATE: Injection Attack
