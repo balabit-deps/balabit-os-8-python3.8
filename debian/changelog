@@ -1,3 +1,12 @@
+python3.8 (3.8.10-0ubuntu1~20.04.5) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Injection Attack
+    - debian/patches/CVE-2015-20107.patch: Make mailcap refuse to match unsafe
+      filenames/types/param in Lib/mailcap.py, Lib/test/test_mailcap.py.
+    - CVE-2015-20107
+
+ -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Wed, 22 Jun 2022 17:18:18 -0300
+
 python3.8 (3.8.10-0ubuntu1~20.04.4bb1) focal; urgency=medium
 
   * Balabit patched version
