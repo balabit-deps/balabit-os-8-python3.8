@@ -1,3 +1,9 @@
+python3.8 (3.8.10-0ubuntu1~20.04.6bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 10 Dec 2022 16:26:26 +0100
+
 python3.8 (3.8.10-0ubuntu1~20.04.6) focal-security; urgency=medium
 
   * SECURITY UPDATE: Buffer overflow
