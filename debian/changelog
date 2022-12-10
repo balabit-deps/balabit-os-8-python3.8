@@ -1,3 +1,14 @@
+python3.8 (3.8.10-0ubuntu1~20.04.6) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Buffer overflow
+    - debian/patches/CVE-2022-37454.patch: fixes buffer overflow in
+      Modules/_sha3/kcp/KeccakSponge.inc.
+  * SECURITY UPDATE: Denial of service
+    - debian/patches/CVE-2022-45061.patch: fix quadratic time idna
+      decoding in Lib/encodings/idna.py.
+
+ -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Mon, 14 Nov 2022 09:59:47 -0300
+
 python3.8 (3.8.10-0ubuntu1~20.04.5bb1) focal; urgency=medium
 
   * Balabit patched version
