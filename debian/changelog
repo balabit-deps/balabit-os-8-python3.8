@@ -1,3 +1,14 @@
+python3.8 (3.8.10-0ubuntu1~20.04.8) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Possible Bypass Blocklisting
+    - debian/patches/CVE-2023-24329-2.patch: adds a complementary patch/fix
+      for CVE-2023-24329 that was partially fixed before. This patch starts
+      stripping C0 control and space chars in 'urlsplit' in Lib/urllib/parse.py,
+      Lib/test/test_urlparse.py.
+    - CVE-2023-24329
+
+ -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Fri, 26 May 2023 11:05:08 -0300
+
 python3.8 (3.8.10-0ubuntu1~20.04.7) focal-security; urgency=medium
 
   * SECURITY UPDATE: Possible Bypass Blocklisting
