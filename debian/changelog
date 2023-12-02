@@ -1,3 +1,9 @@
+python3.8 (3.8.10-0ubuntu1~20.04.9bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 02 Dec 2023 15:33:47 +0000
+
 python3.8 (3.8.10-0ubuntu1~20.04.9) focal-security; urgency=medium
 
   * SECURITY UPDATE: TLS handshake bypass
