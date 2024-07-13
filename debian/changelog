@@ -1,3 +1,16 @@
+python3.8 (3.8.10-0ubuntu1~20.04.10) focal-security; urgency=medium
+
+  * SECURITY UPDATE: incorrect permission assignment
+    - debian/patches/CVE-2023-6597.patch: fix symlink bug in cleanup.
+    - CVE-2023-6597
+  * SECURITY UPDATE: zipbomb DoS attack
+    - debian/patches/CVE-2024-0450.patch: raise BadZipFile when trying
+      to read an entry that overlaps with other entry or central
+      directory.
+    - CVE-2024-0450
+
+ -- Allen Huang <allen.huang@canonical.com>  Mon, 25 Mar 2024 10:42:49 +0000
+
 python3.8 (3.8.10-0ubuntu1~20.04.9bb1) focal; urgency=medium
 
   * Balabit patched version
