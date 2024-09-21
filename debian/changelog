@@ -1,3 +1,9 @@
+python3.8 (3.8.10-0ubuntu1~20.04.12bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 21 Sep 2024 14:30:33 +0000
+
 python3.8 (3.8.10-0ubuntu1~20.04.12) focal-security; urgency=medium
 
   * SECURITY UPDATE: incorrect special character parsing in email module
