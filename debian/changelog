@@ -1,3 +1,15 @@
+python3.8 (3.8.10-0ubuntu1~20.04.13) focal-security; urgency=medium
+
+  * SECURITY UPDATE: incorrect quoting in venv module
+    - debian/patches/CVE-2024-9287.patch: quote template strings in venv
+      activation scripts in Lib/test/test_venv.py, Lib/venv/__init__.py,
+      Lib/venv/scripts/common/activate, Lib/venv/scripts/nt/activate.bat,
+      Lib/venv/scripts/posix/activate.csh,
+      Lib/venv/scripts/posix/activate.fish.
+    - CVE-2024-9287
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 07 Nov 2024 08:10:47 -0500
+
 python3.8 (3.8.10-0ubuntu1~20.04.12bb1) focal; urgency=medium
 
   * Balabit patched version
