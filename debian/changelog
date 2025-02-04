@@ -1,3 +1,14 @@
+python3.8 (3.8.10-0ubuntu1~20.04.15) focal-security; urgency=medium
+
+  * SECURITY UPDATE: urlparse does not flag hostname with square brackets
+    as incorrect
+    - debian/patches/CVE-2025-0938.patch: disallow square brackets in
+      domain names for parsed URLs in Lib/test/test_urlparse.py,
+      Lib/urllib/parse.py.
+    - CVE-2025-0938
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 04 Feb 2025 10:02:54 -0500
+
 python3.8 (3.8.10-0ubuntu1~20.04.14) focal-security; urgency=medium
 
   * SECURITY UPDATE: incorrect validation of bracketed hosts
