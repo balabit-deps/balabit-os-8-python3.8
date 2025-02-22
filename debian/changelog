@@ -1,3 +1,9 @@
+python3.8 (3.8.10-0ubuntu1~20.04.15bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 22 Feb 2025 15:24:42 +0000
+
 python3.8 (3.8.10-0ubuntu1~20.04.15) focal-security; urgency=medium
 
   * SECURITY UPDATE: urlparse does not flag hostname with square brackets
