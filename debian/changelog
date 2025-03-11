@@ -1,3 +1,23 @@
+python3.8 (3.8.10-0ubuntu1~20.04.16) focal-security; urgency=medium
+
+  * SECURITY UPDATE: incorrect quoting in venv module
+    - debian/patches/CVE-2024-9287.patch: Updated to fix additional
+      quotes in activation scripts Lib/venv/scripts/common/activate,
+      Lib/venv/scripts/posix/activate.csh, and
+      Lib/venv/scripts/posix/activate.fish.
+    - CVE-2024-9287
+  * SECURITY UPDATE: urlparse does not flag hostname with square brackets
+    as incorrect
+    - debian/patches/CVE-2025-0938-pre1.patch: Remove urlsplit()
+      optimization for 'http' prefixed inputs.
+    - debian/patches/CVE-2025-0938-pre2.patch: Fix urlparse() with numeric
+      paths.
+    - debian/patches/CVE-2025-0938.patch: Refreshed. It has together with
+      the pre patches the intended effect now.
+    - CVE-2025-0938
+
+ -- Fabian Toepfer <fabian.toepfer@canonical.com>  Tue, 11 Mar 2025 18:45:31 +0100
+
 python3.8 (3.8.10-0ubuntu1~20.04.15) focal-security; urgency=medium
 
   * SECURITY UPDATE: urlparse does not flag hostname with square brackets
