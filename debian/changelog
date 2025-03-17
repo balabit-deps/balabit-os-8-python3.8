@@ -1,3 +1,11 @@
+python3.8 (3.8.10-0ubuntu1~20.04.17) focal-security; urgency=medium
+
+  * SECURITY REGRESSION: IPv6 parsing issue (LP: #2103454)
+    - debian/patches/CVE-2025-0938*.patch: Disable patches until further
+      investigation
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 17 Mar 2025 15:35:05 -0400
+
 python3.8 (3.8.10-0ubuntu1~20.04.16) focal-security; urgency=medium
 
   * SECURITY UPDATE: incorrect quoting in venv module
