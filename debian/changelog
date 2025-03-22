@@ -1,3 +1,9 @@
+python3.8 (3.8.10-0ubuntu1~20.04.17bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 22 Mar 2025 15:24:40 +0000
+
 python3.8 (3.8.10-0ubuntu1~20.04.17) focal-security; urgency=medium
 
   * SECURITY REGRESSION: IPv6 parsing issue (LP: #2103454)
