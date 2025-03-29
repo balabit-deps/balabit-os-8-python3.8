@@ -1,3 +1,16 @@
+python3.8 (3.8.10-0ubuntu1~20.04.18) focal-security; urgency=medium
+
+  * SECURITY UPDATE: urlparse does not flag hostname with square brackets
+    as incorrect
+    - debian/patches/CVE-2025-0938-pre1.patch: Removed.
+    - debian/patches/CVE-2025-0938-pre2.patch: Removed.
+    - debian/patches/add-support-for-scoped-IPv6-addresses.patch: Add
+      support for scoped IPv6 addresses.
+    - debian/patches/CVE-2025-0938.patch: Updated.
+    - CVE-2025-0938
+
+ -- Fabian Toepfer <fabian.toepfer@canonical.com>  Tue, 18 Mar 2025 21:04:55 +0100
+
 python3.8 (3.8.10-0ubuntu1~20.04.17bb1) focal; urgency=medium
 
   * Balabit patched version
